@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c34b0a8-b107-476d-92d4-18927741661e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Leecode-1/TwoSum_V1.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +16,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Leecode-1" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WvWMaV4oBzUPNZO0Q5KVlJVHsG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,7 +35,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -59,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580030502010</updated>
       <workItem from="1580030503397" duration="4292000" />
+      <workItem from="1580620701417" duration="5364000" />
     </task>
     <servers />
   </component>
@@ -66,9 +68,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-509" y="-901" key="SettingsEditor" timestamp="1580038103519">
-      <screen x="-978" y="-1080" width="1920" height="1080" />
+    <state x="-982" y="-789" key="SettingsEditor" timestamp="1580623858036">
+      <screen x="-1080" y="-1103" width="1080" height="1897" />
     </state>
     <state x="-509" y="-901" key="SettingsEditor/0.0.1680.1050/-978.-1080.1920.1080/942.-1080.1920.1080@-978.-1080.1920.1080" timestamp="1580038103519" />
+    <state x="-982" y="-789" key="SettingsEditor/0.23.1680.1027/0.-1057.1920.1057/-1080.-1103.1080.1897@-1080.-1103.1080.1897" timestamp="1580623858036" />
   </component>
 </project>
