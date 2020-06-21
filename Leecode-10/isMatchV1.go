@@ -1,55 +1,60 @@
 package main
 func isMatch(s string, p string) bool {
-	dp := make([][]int, len(s)+1)
-	for i := 0; i <= len(s); i++ {
-		dp[i] = make([]int, len(p)+1)
-	}
-	return isMatchCore(s, p, 0, 0, dp)
-}
-func isMatchCore(s, p string, i, j int, dp [][]int) bool {
-	if dp[i][j] == 1 {
-		return true
-	} else if dp[i][j] == -1 {
-		return false
-	}
-	flag := false
-	if j == len(p) {
-		if i == len(s) {
-			flag = true
-		} else {
-			flag = false
+	slen, plen := len(s), len(p)
+	if slen == 0 {
+		if plen%2 != 0 {
+			return false
 		}
-
-	}
-	if j == len(p)-1 {
-		if i == len(s) {
-			flag = false
-		} else if s[i] == p[j] || p[j] == '.' {
-			flag = isMatchCore(s, p, i+1, j+1, dp)
-		} else {
-			flag = false
-		}
-	}
-	if j < len(p)-1 {
-		if p[j+1] == '*' {
-			if i <= len(s)-1 && (s[i] == p[j] || p[j] == '.') {
-				flag = isMatchCore(s, p, i+1, j+2, dp) || isMatchCore(s, p, i+1, j, dp) || isMatchCore(s, p, i, j+2, dp)
-			} else {
-				flag = isMatchCore(s, p, i, j+2, dp)
+		for j := 1; j < plen; j += 2 {
+			if p[j] != '*' {
+				return false
 			}
-
-		} else if i <= len(s)-1 && (s[i] == p[j] || p[j] == '.') {
-			flag = isMatchCore(s, p, i+1, j+1, dp)
 		}
-
+		return true
 	}
-	if flag == true {
-		dp[i][j] = 1
-	} else {
-		dp[i][j] = -1
-
+	if plen == 0 {
+		return slen == 0
 	}
-	return flag
-
+	dp := make([][]bool, slen, slen)
+	for i := 0; i < slen; i++ {
+		dp[i] = make([]bool, plen, plen)
+	}
+	// init: dp(0, j)
+	dp[0][0] = p[0] == s[0] || p[0] == '.'
+	for canPreEmpty, j := true, 1; j < plen; j += 1 {
+		if canPreEmpty && j%2 == 1 && p[j] != '*' {
+			canPreEmpty = false
+		}
+		switch p[j] {
+		case '.':
+			dp[0][j] = canPreEmpty
+		case '*':
+			if p[j-1] == s[0] || p[j-1] == '.' {
+				dp[0][j] = canPreEmpty || (j >= 2 && dp[0][j-2])
+			} else {
+				dp[0][j] = j-2 >= 0 && dp[0][j-2]
+			}
+		default:
+			dp[0][j] = s[0] == p[j] && canPreEmpty
+		}
+	}
+	// cal: dp(i, j)
+	for i := 1; i < slen; i++ {
+		for j := 1; j < plen; j++ {
+			switch p[j] {
+			case '.':
+				dp[i][j] = dp[i-1][j-1]
+			case '*':
+				if p[j-1] == s[i] || p[j-1] == '.' {
+					dp[i][j] = (j-2 >= 0 && dp[i][j-2]) || dp[i-1][j]
+				} else {
+					dp[i][j] = j-2 >= 0 && dp[i][j-2]
+				}
+			default:
+				dp[i][j] = s[i] == p[j] && dp[i-1][j-1]
+			}
+		}
+	}
+	return dp[slen-1][plen-1]
 }
 

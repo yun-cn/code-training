@@ -19,7 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c34b0a8-b107-476d-92d4-18927741661e" name="Default Changelist" comment="" />
+    <list default="true" id="1c34b0a8-b107-476d-92d4-18927741661e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Leecode-11/maxArea.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-12/intToRoman.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-13/romanToInt.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-14/longestCommonPrefix.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-15/threeSum.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-16/threeSumClosest.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-17/letterCombinations.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Leecode-18/threeSum.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Leecode-10/isMatchV1.go" beforeDir="false" afterPath="$PROJECT_DIR$/Leecode-10/isMatchV1.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
